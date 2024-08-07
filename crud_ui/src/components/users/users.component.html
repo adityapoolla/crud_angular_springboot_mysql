@@ -1,0 +1,16 @@
+<div class="users-container">
+  <h1>All Users</h1>
+  @for(user of users; track user.id){
+  <div class="card">
+    <div class="container">
+      <h4>
+        <b>{{ user.firstName + " " + user.lastName }}</b>
+      </h4>
+      <p>{{ user.emailId }}</p>
+    </div>
+  </div>
+  }
+  <a routerLink="add-user">
+    <input type="button" class="button" value="Add User" />
+  </a>
+</div>
